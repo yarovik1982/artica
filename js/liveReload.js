@@ -1,0 +1,1 @@
+document.write('<script src="http://js/liveReload.js' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
