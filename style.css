@@ -33,7 +33,7 @@ body, html{
   min-height: 101px;
   background-color: #fff;
 }
-.container__header {
+.container {
   max-width: 1189px;
   padding: 0 20px;
   margin: 0 auto;
@@ -237,7 +237,9 @@ body, html{
   padding-top: 73px;
 }
 .quote {
-  
+  margin: 0 auto;
+  padding: 40px 0;
+  max-width: fit-content;
   color: #ffffff;
   font-family: Lato;
   font-size: 25px;
@@ -271,7 +273,7 @@ body, html{
   font-family: Lato;
   font-size: 15px;
   font-weight: 400;
-  line-height: 27px;
+  /*line-height: 27px;*/
   text-align: center;
   margin-top: 38px;
   
@@ -364,13 +366,13 @@ body, html{
   background-color: #161f32;
   margin-bottom: 25px;
 }
-.container__player-bg {
+.player-bg {
   max-width: 1208px;
   padding: 0 20px;
   margin: 25px auto;
   position: relative;
 }
-.container__player-bg:after{
+.player-bg::after{
     content: '';
   position: absolute;
   left: 36.5%; /*36.5%,/ 61.5%,/ 86.5%*/
@@ -572,11 +574,15 @@ body, html{
 }
 .block__arrow-down{
   width: 214px;
+  display: flex;
   height: 214px;
+  justify-content: center;
+  align-items: center;
 }
 .arrow-icon{
-  margin-top: 78px;
+  /*margin-top: 78px;
   margin-left: 78px;
+  background: url(images/arrow_down.svg);*/
 }
 .arrow-icon:hover{
   cursor: pointer;
@@ -590,7 +596,10 @@ body, html{
   height: 214px;
   border-radius: 107px;
   background: url(images/cat3.jpg);
-  
+}
+.block__photo-staff:hover{
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .staff__name {
   margin-top: 29px;
@@ -615,19 +624,18 @@ body, html{
   min-height: 263px;
   background-color: #161f32;
 }
-.container__my-story {
-  max-width: 1215px;
-  padding-left: 20px;
-  padding-right: 20px;
+.my-story {
+  max-width: 1189px;
+  padding: 20px;
   margin: 0 auto;
-  padding-top: 25px;
   position: relative;
 }
-.container__my-story:after{
-  content: '';
-  position: absolute;
+/*.my-story:after*/
+.marker{
+  /*content: '';*/
+  position: relative;
   left: 11.5%; /*36.5%,/ 61.5%,/ 86.5%*/
-  top: -16px;
+  top: -38px;
   margin-left: -9px;
   height: 16px;
   width: 29px;
@@ -644,7 +652,8 @@ body, html{
   cursor: pointer;
 }
 .x-icon {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 .my-story__title {
   color: #ffffff;
@@ -1017,17 +1026,14 @@ h3{
 
 .subscribe-form {
   margin: 66px auto;
+  display: flex;
+  max-width: 800px;
 }
 .container__subscribe {
   max-width: 840px;
   padding: 0 20px;
   margin: 0 auto;
 }
-.subscribe-form {
-  display: flex;
-}
-
-
 .input {
   min-width: 573px;
   height: 66px;

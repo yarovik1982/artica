@@ -373,7 +373,7 @@ body, html{
 }
 .wrap__player-bg {
   max-width: 1169px;
-  height: 420px;
+  /*height: 420px;*/
   padding-top: 25px;
 }
 .player-bg__column {
@@ -1146,3 +1146,6 @@ textarea::-webkit-input-placeholder{
   font-weight: 300;
   line-height: 27px;
 }
+
+
+

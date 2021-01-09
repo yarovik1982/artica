@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="maximum-scale=1.0,user-scalable=0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Molle:ital@1&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
@@ -13,7 +15,7 @@
 <body>
 	<div class="wrapper">
    <header class="header">
-     <div class="container__header">
+     <div class="container">
        <nav class="nav">
          <div class="wrap__nav">
            <div class="nav__logo logo">Artica</div>
@@ -25,7 +27,7 @@
    <section class="content">
      <div class="baner">
        <div class="baner-baner">
-         <div class="container__baner">
+         <div class="container">
            <div class="baner-baner__item">
              <div class="baner-baner__logo-big">Artica</div>
              <div class="baner-baner__line-deep"><img src="images/line-deep.webp" alt=""></div>
@@ -39,7 +41,7 @@
        </div>
      </div>
      <div class="customiz__template">
-       <div class="container__customiz">
+       <div class="container">
          <div class="customiz__title title-deep">FULLY LAYERED AND CUSTOMIZABLE TEMPLATE</div>
          <div class="costomiz__subtitle subtitle-deep">OUR SERVICES</div>
          <div class="customiz__line-light line-light"><img src="images/line-light.webp" alt=""></div>
@@ -104,7 +106,7 @@
        </div>
      </div>
      <div class="block__quote">
-       <div class="container__quote">
+       <div class="container">
          <div class="quote">
          <div class="left"><i class="fa fa-1x pull-left fa-quote-left fa-inverse"></i></div>
             <span class="quote__text">Design must reflect the practical and aesthetic in business but above all... 
@@ -134,7 +136,7 @@
        </div>
      </div>
      <div class="wrap__block-photo-top">
-      <div class="container block-photo-top">
+      <div class="container">
        <div class="block-photo-top__row">
          <div class="block-photo-top__item">
            <div class="block-photo">
@@ -154,7 +156,7 @@
        </div>
      </div>
      <div class="block__player-bg">
-       <div class="container__player-bg">
+       <div class="container player-bg">
          <div class="wrap__player-bg">
            <div class="player-bg__column">
              <div class="column__left">
@@ -200,7 +202,7 @@
        </div>
      </div>
      <div class="wrap__block-photo-btm">
-      <div class="container block-photo-btm">
+      <div class="container">
        <div class="block-photo-btm__row">
          <div class="block-photo-btm__item">
            <div class="block-photo">
@@ -222,7 +224,7 @@
      <div class="arrow-down"><span class="fa-arrow-circle-down fa-inverse fa-3x"></span></div>
      </div>
    </section>
-    <div class="container__block__text-love-work">
+    <div class="container">
       <div class="block__text-love-work">
         <div class="text-love__title title-deep">WE LOVE OUR WORK</div>
         <div class="text-love__text text-deep">Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tinci
@@ -232,7 +234,7 @@
         </div>
     </div>
     <div class="block__fully-design">
-      <div class="container__fully-design">
+      <div class="container">
         <div class="fully-design__title">FULLY RESPONSIVE DESIGN</div>
         <div class="fully-design__subtitle">ABOUT US</div>
         <div class="fully-design__line"><img src="images/line-deep.webp" alt=""></div>
@@ -244,8 +246,10 @@
             <div class="photo-staff__column">
               <div class="staff__column__item">
                 <div class="block__circle">
-                  <div class="block__arrow-down"><img class="arrow-icon" src="images/arrow_down.svg" alt=""></div>
-                  <div class="block__photo-staff"></div>
+                  <div class="block__arrow-down" id="arrow-down">
+                    <img class="arrow-icon" src="images/arrow_down.svg" alt="">
+                  </div>
+                  <div class="block__photo-staff" id="staff-1"></div>
                 </div>
                 <div class="staff__name">John Doe</div>
                 <div class="staff__position">Creative Director</div>
@@ -255,7 +259,7 @@
               <div class="staff__column__item">
                 <div class="block__circle">
                   <div class="block__arrow-down"><img class="arrow-icon" src="images/arrow_down.svg" alt=""></div>
-                  <div class="block__photo-staff"></div>
+                  <div class="block__photo-staff" id="staff-2"></div>
                 </div>
                 <div class="staff__name">Lorem Ipsum</div>
                 <div class="staff__position">Graphic Designer</div>
@@ -265,7 +269,7 @@
               <div class="staff__column__item">
                 <div class="block__circle">
                   <div class="block__arrow-down"><img class="arrow-icon" src="images/arrow_down.svg" alt=""></div>
-                  <div class="block__photo-staff"></div>
+                  <div class="block__photo-staff" id="staff-3"></div>
                 </div>
                 <div class="staff__name">Lorem Doe</div>
                 <div class="staff__position">Web Developer</div>
@@ -275,7 +279,7 @@
               <div class="staff__column__item">
                 <div class="block__circle">
                   <div class="block__arrow-down"><img class="arrow-icon" src="images/arrow_down.svg" alt=""></div>
-                  <div class="block__photo-staff"></div>
+                  <div class="block__photo-staff" id="staff-4"></div>
                 </div>
                 <div class="staff__name">John Ipsum</div>
                 <div class="staff__position">Photographer</div>
@@ -286,21 +290,22 @@
      </div>
     </div>
     <section class="block__my-story">
-      <div class="container__my-story">
-        <div class="x-icon"><img src="images/x_icon.svg" alt=""></div>  
-        <div class="my-story__title">My Story</div>
-        <div class="my-story__text"><p>Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elemena porttitor 
+      <div class="container my-story">
+        <div class="marker" id="marker"></div>
+        <a class="x-icon" href="#!"><img src="images/x_icon.svg" alt=""></a>  
+        <div class="my-story__title" id="my-story-title">My Story</div>
+        <div class="my-story__text" id="my-story-text"><p>Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elemena porttitor 
         accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit anet.</p>
         <p>Oitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elemena porttitor accumsan tinci
           dunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit anet.</p></div>
-        <div class="my-story__icons">
+        <div class="my-story__icons" id="my-story-icons">
           <div class="icon__clock"><img src="images/clock_icon.svg" alt=""><span class="icon">2 years in Artica</span></div>
           <div class="icon__people"><img src="images/people_Icon.svg" alt=""><span class="icon">From NY</span></div>
         </div>
       </div>
     </section>
     <section class="block__scills">
-      <div class="container__block__scills">
+      <div class="container">
         <div class="scills__title title-deep">WE HAVE SKILLS</div>
         <div class="scills__text text-deep">Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tinci
           dunt. Quisque velit nisi, pretium ut lacinia in, elemena porttitor accumsan tincidun.</div>
@@ -329,7 +334,7 @@
       </div>
     </section>
     <section class="block__baner-follower">
-      <div class="container__baner-follower">
+      <div class="container">
         <div class="wrap__baner-follower">
           <div class="baner-follower__row">
             <div class="baner-follower__column">
@@ -499,7 +504,7 @@
      <div class="arrow-down"><span class="fa-arrow-circle-down fa-inverse fa-3x"></span></div>
    </section>
    <section class="subscribe">
-     <div class="container__subscribe">
+     <div class="container">
        <div class="subscribe__title"><h2 class="title-deep">SUBSCRIBE TO OUR NEWSLETTER</h2></div>
        <div class="subscribe__text"><h4 class="text-deep">Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tinci
         dunt. Quisque velit nisi, pretium ut lacinia in, elemena porttitor accumsan tincidun.</h4>
@@ -512,7 +517,7 @@
    </section>
    <section class="customers">
      <div class="baner__customers">
-       <div class="container__customers">
+       <div class="container">
          <div class="customers__label">
            <h2 class="label-light">OUR CUSTOMERS</h2>
            <h4 class="text-deep">Donec sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tinci
@@ -541,7 +546,7 @@
          </div>
    </section>
    <section class="ask">
-     <div class="container__ask">
+     <div class="container">
        <div class="ask__label">
          <div class="ask__label-title fully-design__title">FEEL FREE TO ASK US ANYTHING</div>
         <div class="ask__label-subtitle fully-design__subtitle">CONTACT US</div>
@@ -607,7 +612,9 @@
   
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
   <!-- <script src="js/slider-script.js"></script> -->
+  <script src="js/main.js"></script>
   <script src="script_galery.js"></script>
-  <script src="animation.js"></script>
+  <!-- <script src="animation.js"></script> -->
 </body>
+
 </html>
